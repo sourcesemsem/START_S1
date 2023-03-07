@@ -270,10 +270,10 @@ async def verifyLoggerGroup():
         except Exception as e:
             LOGS.error("هنالك خطا ما للتعرف على فار كروب الحفظ\n" + str(e))
     else:
-        descript = "✯ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  𓆰."
+        descript = "✯ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا "
         photobt = await sbb_b.upload_file(file="razan/pic/spider.jpg")
         _, groupid = await create_supergroup(
-            "كروب بوت سبايدر", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
+            "جروب اشعارات سبايدر", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("تم انشاء كروب الحفظ بنجاح")
@@ -298,7 +298,7 @@ async def verifyLoggerGroup():
         descript = "✯ لا تحذف او تغادر المجموعه وظيفتها حفظ رسائل التي تأتي على الخاص"
         photobt = await sbb_b.upload_file(file="razan/pic/spider.jpg")
         _, groupid = await create_supergroup(
-            "مجموعة التخزين", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
+            "جروب تخزين سبايدر", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PM_LOGGER_GROUP_ID", groupid)
         print("تم عمل الكروب التخزين بنجاح واضافة الفارات اليه.")
